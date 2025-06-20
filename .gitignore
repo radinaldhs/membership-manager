@@ -1,0 +1,17 @@
+# Folders for experiments
+_scratch/
+
+# Local Docker volumes
+_volumes/
+
+# Loval env file
+.env
+
+# Built binary
+toko-mas-jawa-backend
+
+# Unit test coverage file
+cover.out
+
+*.db
+*.sqlite

@@ -1,0 +1,20 @@
+services:    
+  mysql:
+    image: mysql:8.4.4
+    container_name: mysql
+    hostname: postgres
+    env_file: .env
+    ports:
+      - ${DB_PORT}:${DB_PORT}    
+    environment:
+      MYSQL_TCP_PORT: ${DB_PORT}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}      
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
